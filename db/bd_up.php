@@ -1,6 +1,6 @@
 <?php
 
-    $db = new PDO('mysql:host=localhost;dbname=filmes', "root", "root");
+    $db = new PDO('$databaseType:$database,$user,$pass');
 
     $sql= "DELETE TABLE IF EXISTS filmes";
     if($db->exec($sql))
