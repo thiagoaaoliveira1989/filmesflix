@@ -1,6 +1,6 @@
 <?php
 
-$bd = new SQLite3("filmes.db");
+$db = new PDO('mysql:host=localhost;dbname=filmes', "root", "root");
 
 $sql = "DROP TABLE IF EXISTS filmes";
 

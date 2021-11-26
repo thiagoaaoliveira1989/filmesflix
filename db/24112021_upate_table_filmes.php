@@ -1,6 +1,6 @@
 <?php
 
-$bd = new SQLite3("./db/filmes.db");
+$db = new PDO('mysql:host=localhost;dbname=filmes', "root", "root");
 
 $sql = "ALTER TABLE filmes ADD COLUMN favorito INT DEFAULT 0";
 
