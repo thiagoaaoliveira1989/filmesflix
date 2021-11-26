@@ -1,8 +1,8 @@
 <?php
 
 
-
 class Conexao{
+
     public static function criar():PDO{
         $env = (parse_ini_file('.env')) ? parse_ini_file('.env') : getenv();
         $connectionType = $env["DBTYPE"];
