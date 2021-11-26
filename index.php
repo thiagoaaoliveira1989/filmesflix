@@ -1,12 +1,12 @@
 <?php
 
 require_once __DIR__ . "/vendor/autoload.php";
-
+require_once __DIR__ ."/classes/repository/FilmesRepositoryPDO.php";
 
 $rota = $_SERVER["REQUEST_URI"];
 $metodo = $_SERVER["REQUEST_METHOD"];
 
-require_once __DIR__ ."/classes/repository/FilmesRepositoryPDO.php";
+
 
 if ($rota === "/"){
     require_once __DIR__ ."/classes/view/galeria.php";
