@@ -18,7 +18,7 @@ $filmes = $controller->index();
       </ul>
     </div>
     <div class="nav-header center">
-      <h1>CLOROCINE</h1>
+      <h1>FILMESFLIX</h1>
     </div>
     <div class="nav-content">
       <ul class="tabs tabs-transparent purple darken-1">

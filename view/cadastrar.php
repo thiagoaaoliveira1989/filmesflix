@@ -10,7 +10,7 @@
       </ul>
     </div>
     <div class="nav-header center">
-      <h1>CLOROCINE</h1>
+      <h1>FILMESFLIX</h1>
     </div>
   </nav>
 
