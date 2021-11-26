@@ -13,7 +13,6 @@ class Conexao{
             $database = "host=$server;dbname=$database";
         }
         return new PDO('$databaseType:$database,$user,$pass');
-        /* return new PDO('mysql:host=localhost;dbname=filmes', 'root', 'root'); */
     }
 }
 

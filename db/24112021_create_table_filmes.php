@@ -1,8 +1,9 @@
 <?php
 
-    $db = new PDO('$databaseType:$database,$user,$pass');
+    $db = new SQLite3("filmes.db");
 
-    $sql= "DELETE TABLE IF EXISTS filmes";
+    $sql= "DROP TABLE IF EXISTS filmes";
+    
     if($db->exec($sql))
         echo "\nTabela de Filmes Apagada com Sucesso\n";
 
