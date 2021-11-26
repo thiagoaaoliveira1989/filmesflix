@@ -8,11 +8,12 @@
 
 
     $sql= "CREATE TABLE filmes (
-      id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+      id INTEGER PRIMARY KEY AUTO_INCREMENT,
       titulo VARCHAR (200) NOT NULL,
       poster VARCHAR (200),
       sinopse TEXT,
-      nota DECIMAL(2,1)
+      nota DECIMAL(3,1),
+      favorito INT DEFAULT 0
   )";
 
 if($db->exec($sql))
