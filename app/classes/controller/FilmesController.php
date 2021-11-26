@@ -4,7 +4,7 @@
 require_once __DIR__ . "/../repository/FilmesRepositoryPDO.php";
 require_once __DIR__ . "/../model/Filme.php";
 require_once __DIR__ . "/../util/SimpleImage.php";
-session_start();
+
 class FilmesController{
     
     public function index(){
