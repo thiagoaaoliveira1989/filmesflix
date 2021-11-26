@@ -13,7 +13,6 @@ class Conexao{
       
         if ($connectionType === "mysql"){
             $databaseURL = "host=$server;dbname=$database";
-            echo $databaseURL;
         }else{
             $databaseURL = $database;
         }
