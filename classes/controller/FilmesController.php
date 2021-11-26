@@ -1,10 +1,10 @@
 <?php
 
-session_start();
-require "./repository/FilmesRepositoryPDO.php";
-require "./model/Filme.php";
-require "./util/SimpleImage.php";
 
+require_once __DIR__ . "/../repository/FilmesRepositoryPDO.php";
+require_once __DIR__ . "/../model/Filme.php";
+require_once __DIR__ . "/../util/SimpleImage.php";
+session_start();
 class FilmesController{
     
     public function index(){

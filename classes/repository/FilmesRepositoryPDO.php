@@ -1,6 +1,7 @@
 <?php
 
-require "Conexao.php";
+require_once __DIR__."/Conexao.php";
+
 
 class FilmesRepositoryPDO{
 

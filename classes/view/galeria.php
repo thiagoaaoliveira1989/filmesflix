@@ -1,8 +1,13 @@
-<?php include "cabecalho.php" ?>
+<?php 
+session_start();
+require_once __DIR__ ."/cabecalho.php"; 
+require_once __DIR__ ."/../util/Mensagem.php";
+require_once __DIR__ ."/../controller/Filmescontroller.php";
+?>
 
 <?php
-session_start();
-require "./util/Mensagem.php";
+
+
 
 $controller = new FilmesController();
 $filmes = $controller->index();

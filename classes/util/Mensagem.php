@@ -1,5 +1,8 @@
 <?php
 
+require_once __DIR__ . "/../view/galeria.php";
+
+
 class Mensagem{
     public static function mostrar(){
         session_start();

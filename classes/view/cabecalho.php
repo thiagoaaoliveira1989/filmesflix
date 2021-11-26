@@ -13,7 +13,28 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+    background-color: #e5e5e5;
+}
+
+.nav-extended{
+    background-image: url("https://1.bp.blogspot.com/-n5zpjeitiTI/XzG-s9WeqOI/AAAAAAAAWag/ltc-UZ6HaKwky82PdZRNDF5lNQJ_mEqugCLcBGAsYHQ/s1200/Pipoca_Cinema_FB.jpg" );
+    background-size: cover;
+    background-blend-mode: soft-light;
+    background-position-y: 20% ;
+    
+}
+
+a.active{
+    border-bottom: solid 2px white;
+    background-color: transparent;
+}
+
+.nav-header h1{
+    text-shadow: 2px 2px 8px black;
+}
+    </style>
 </head>
 
 
