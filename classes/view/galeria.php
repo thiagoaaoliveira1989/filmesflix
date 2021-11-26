@@ -73,7 +73,9 @@ $filmes = $controller->index();
 
   <?= Mensagem::mostrar(); ?>
 
+
   <script>
+    /*FAVORITAR CARD*/ 
     document.querySelectorAll(".btn-fav").forEach(btn => {
       btn.addEventListener("click", e => {
         const id = btn.getAttribute("data-id")
@@ -95,7 +97,7 @@ $filmes = $controller->index();
           })
       });
     });
-
+     /*DELETAR CARD*/ 
     document.querySelectorAll(".btn-delete").forEach(btn => {
       btn.addEventListener("click", e => {
         const id = btn.getAttribute("data-id")
