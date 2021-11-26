@@ -1,7 +1,10 @@
 <?php
 
-$db = new SQLite3("filmes.db");
+$bd = new SQLite3("./db/filmes.db");
 
-    $sql= "ALTER TABLE filmes ADD COLUMN favorito INT DEFAULT 0";
-    if($db->exec($sql))
-        echo "\nTabela de Filmes Alterada com Sucesso\n";
+$sql = "ALTER TABLE filmes ADD COLUMN favorito INT DEFAULT 0";
+
+if ($bd->exec($sql)) 
+    echo "\ntabela filmes alterada com sucesso\n"; 
+else
+    echo "\nerro ao alterar tabela filmes\n"; 
