@@ -1,6 +1,8 @@
 <?php
 
-$db = new PDO('mysql:host=localhost;dbname=filmes', "root", "root");
+require_once "../repository/conexao.php";
+
+$db = new PDO("$connectionType:$databaseURL", $user, $pass);
 
 $sql = "ALTER TABLE filmes ADD COLUMN favorito INT DEFAULT 0";
 

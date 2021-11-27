@@ -1,12 +1,8 @@
 <?php 
-session_start();
-require_once __DIR__ ."/cabecalho.php"; 
-require_once __DIR__ ."/../util/Mensagem.php";
-require_once __DIR__ ."/../controller/Filmescontroller.php";
-?>
 
-<?php
-
+require_once "./controller/FilmesController.php";
+require_once "cabecalho.php";
+require_once "./util/Mensagem.php";
 
 
 $controller = new FilmesController();
@@ -23,7 +19,7 @@ $filmes = $controller->index();
       </ul>
     </div>
     <div class="nav-header center">
-      <h1>FILMESFLIX</h1>
+      <h1>CLOROCINE</h1>
     </div>
     <div class="nav-content">
       <ul class="tabs tabs-transparent purple darken-1">
@@ -58,7 +54,7 @@ $filmes = $controller->index();
             <div class="card-reveal">
               <span class="card-title grey-text text-darken-4"><?= $filme->titulo ?><i class="material-icons right">close</i></span>
               <p><?= substr($filme->sinopse, 0, 500) . "..." ?></p>
-              <button class="btn-delete waves-effect waves-light btn-small right red accent-2 btn-delete" data-id="<?= $filme->id ?>"><i class="material-icons">delete</i></button>
+              <button class="waves-effect waves-light btn-small right red accent-2 btn-delete" data-id="<?= $filme->id ?>"><i class="material-icons">delete</i></button>
 
             </div>
           </div>
@@ -73,9 +69,7 @@ $filmes = $controller->index();
 
   <?= Mensagem::mostrar(); ?>
 
-
   <script>
-    /*FAVORITAR CARD*/ 
     document.querySelectorAll(".btn-fav").forEach(btn => {
       btn.addEventListener("click", e => {
         const id = btn.getAttribute("data-id")
@@ -97,7 +91,7 @@ $filmes = $controller->index();
           })
       });
     });
-     /*DELETAR CARD*/ 
+
     document.querySelectorAll(".btn-delete").forEach(btn => {
       btn.addEventListener("click", e => {
         const id = btn.getAttribute("data-id")
@@ -113,7 +107,7 @@ $filmes = $controller->index();
           })
           .catch(error => {
             M.toast({
-              html: 'Erro ao deletar'
+              html: 'Erro ao favoritar'
             })
           })
       });

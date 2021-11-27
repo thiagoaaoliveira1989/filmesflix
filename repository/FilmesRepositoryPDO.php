@@ -1,7 +1,6 @@
 <?php
 
-require "Conexao.php";
-
+require_once "Conexao.php";
 
 class FilmesRepositoryPDO{
 

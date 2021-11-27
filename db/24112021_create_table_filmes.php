@@ -1,6 +1,7 @@
 <?php
+require_once "../repository/conexao.php";
 
-$db = new PDO('mysql:host=localhost;dbname=filmes', "root", "root");
+$db = new PDO("$connectionType:$databaseURL", $user, $pass);
 
 $sql = "DROP TABLE IF EXISTS filmes";
 

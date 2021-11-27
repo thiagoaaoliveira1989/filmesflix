@@ -1,4 +1,4 @@
-<?php include_once "cabecalho.php" ?>
+<?php require_once "cabecalho.php" ?>
 
 <body>
 
@@ -10,7 +10,7 @@
       </ul>
     </div>
     <div class="nav-header center">
-      <h1>FILMESFLIX</h1>
+      <h1>CLOROCINE</h1>
     </div>
   </nav>
 

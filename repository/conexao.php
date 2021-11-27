@@ -1,6 +1,5 @@
 <?php
 
-
 class Conexao{
 
     public static function criar():PDO{
@@ -10,7 +9,7 @@ class Conexao{
         $database = $env["DATABASE"];
         $user = $env["DBUSER"];
         $pass = $env["PASS"];
-      
+
         if ($connectionType === "mysql"){
             $databaseURL = "host=$server;dbname=$database";
         }else{

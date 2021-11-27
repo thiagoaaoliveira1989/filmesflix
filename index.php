@@ -1,23 +1,22 @@
-
 <?php
-require "repository/FilmesRepositoryPDO.php";
 
+require_once "controller/FilmesController.php";
 
 $rota = $_SERVER["REQUEST_URI"];
 $metodo = $_SERVER["REQUEST_METHOD"];
 
-
+session_start();
 
 if ($rota === "/"){
-    require "view/galeria.php";
+    require_once "view/galeria.php";
     exit();
 }
 
 if ($rota === "/novo"){
-    if($metodo == "GET") require "view/cadastrar.php";
+    if($metodo == "GET") require_once "view/cadastrar.php";
     if($metodo == "POST") {
         $controller = new FilmesController();
-        $controller->save($_REQUEST);
+        $controller->save($request);
     };
     exit();
 }
@@ -29,7 +28,7 @@ if (substr($rota, 0, strlen("/favoritar")) === "/favoritar") {
 }
 
 if (substr($rota, 0, strlen("/filmes")) === "/filmes") {
-    if($metodo == "GET") require "view/galeria.php";
+    if($metodo == "GET") require_once "view/galeria.php";
     if($metodo == "DELETE"){
         $controller = new FilmesController();
         $controller->delete(basename($rota));
