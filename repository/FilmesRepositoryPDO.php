@@ -24,13 +24,13 @@ class FilmesRepositoryPDO{
     }
 
     public function salvar($filme):bool{
-        $sql = "INSERT INTO filmes (titulo, poster, sinopse, nota) 
+        $sql= "INSERT INTO filmes (titulo, poster, sinopse, nota)
         VALUES (:titulo, :poster, :sinopse, :nota)";
-        $stmt = $this->conexao->prepare($sql);
+        $stmt = $this->conexao->prepare($sql); //instruçao para o banco de dados
         $stmt->bindValue(':titulo', $filme->titulo, PDO::PARAM_STR);
+        $stmt->bindValue(':poster', $filme->poster, PDO::PARAM_STR);
         $stmt->bindValue(':sinopse', $filme->sinopse, PDO::PARAM_STR);
         $stmt->bindValue(':nota', $filme->nota, PDO::PARAM_STR);
-        $stmt->bindValue(':poster', $filme->poster, PDO::PARAM_STR);
 
         return $stmt->execute();
     }

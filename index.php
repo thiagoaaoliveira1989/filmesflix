@@ -16,7 +16,7 @@ if ($rota === "/novo"){
     if($metodo == "GET") require_once "view/cadastrar.php";
     if($metodo == "POST") {
         $controller = new FilmesController();
-        $controller->save($request);
+        $controller->save($_REQUEST);
     };
     exit();
 }

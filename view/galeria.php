@@ -54,7 +54,7 @@ $filmes = $controller->index();
             <div class="card-reveal">
               <span class="card-title grey-text text-darken-4"><?= $filme->titulo ?><i class="material-icons right">close</i></span>
               <p><?= substr($filme->sinopse, 0, 500) . "..." ?></p>
-              <button class="waves-effect waves-light btn-small right red accent-2 btn-delete" data-id="<?= $filme->id ?>"><i class="material-icons">delete</i></button>
+              <button class="btn-delete waves-effect waves-light btn-small right red accent-2 btn-delete" data-id="<?= $filme->id ?>"><i class="material-icons">delete</i></button>
 
             </div>
           </div>
